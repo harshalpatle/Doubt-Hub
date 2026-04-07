@@ -1,0 +1,15 @@
+{
+    "name": "doubthub-backend",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.18.4",
+        "sqlite": "^4.1.4",
+        "sqlite3": "^5.1.6"
+    }
+}
