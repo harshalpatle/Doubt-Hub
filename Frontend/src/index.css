@@ -3,14 +3,61 @@
 @tailwind utilities;
 :root {
     color-scheme: light;
+    --page-bg: #eef4ff;
+    --surface: rgba(255, 255, 255, 0.82);
+    --surface-border: rgba(255, 255, 255, 0.72);
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+body,
+#root {
+    min-height: 100vh;
+}
+
 body {
     margin: 0;
-    font-family: Inter, system-ui, sans-serif;
-    background: #f8fafc;
+    font-family: "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
+    color: var(--text-primary);
+    background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 28%),
+        radial-gradient(circle at top right, rgba(99, 102, 241, 0.12), transparent 24%),
+        linear-gradient(180deg, #f8fbff 0%, #edf4ff 38%, #f6f8fc 100%);
+    background-attachment: fixed;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.45;
+    background-image: radial-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent 92%);
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #94a3b8;
+}
+
+::selection {
+    background: rgba(37, 99, 235, 0.18);
+    color: #0f172a;
 }
